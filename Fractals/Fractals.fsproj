@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DivergentFractals.fs" />
+    <Compile Include="Sierpinski.fs" />
+    <Compile Include="SierpinskiUtil.fs" />
+  </ItemGroup>
+
+</Project>

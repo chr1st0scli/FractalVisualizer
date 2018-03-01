@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalVisualizer", "FractalVisualizer\FractalVisualizer.csproj", "{B5F98B43-5D58-413A-89EB-0FD4FEA7C897}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Fractals", "Fractals\Fractals.fsproj", "{E91B40D2-E4D5-4F2C-A186-894F0A80592B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5F98B43-5D58-413A-89EB-0FD4FEA7C897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F98B43-5D58-413A-89EB-0FD4FEA7C897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F98B43-5D58-413A-89EB-0FD4FEA7C897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F98B43-5D58-413A-89EB-0FD4FEA7C897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E91B40D2-E4D5-4F2C-A186-894F0A80592B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91B40D2-E4D5-4F2C-A186-894F0A80592B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91B40D2-E4D5-4F2C-A186-894F0A80592B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91B40D2-E4D5-4F2C-A186-894F0A80592B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B95C477-6A6F-4E35-A7D5-3C6CDEF3D561}
+	EndGlobalSection
+EndGlobal
