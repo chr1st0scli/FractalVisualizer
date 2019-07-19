@@ -15,7 +15,7 @@ namespace FractalVisualizer
         {
             InitializeComponent();
 
-            color1TextBox.Text = Color.Black.ToArgb().ToString();
+            color1TextBox.Text = Color.Red.ToArgb().ToString();
             color2TextBox.Text = color1TextBox.Text;
             levelNumUpDown.ValueChanged += (sender, e) => panel.Refresh();
             panel.Resize += (sender, e) => panel.Refresh();
@@ -35,16 +35,11 @@ namespace FractalVisualizer
 
         private void Panel_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.Clear(Color.Black);
             if (tabControl.SelectedIndex == 0)
-            {
-                e.Graphics.Clear(Color.White);
                 DrawSierpinski(e);
-            }
             else if (tabControl.SelectedIndex == 1)
-            {
-                e.Graphics.Clear(Color.Black);
                 DrawDivergentFractal(e);
-            }
         }
 
         void DrawSierpinski(PaintEventArgs e)
@@ -93,18 +88,28 @@ namespace FractalVisualizer
             int w = panel.ClientRectangle.Width, h = panel.ClientRectangle.Height;
 
             IEnumerable<Tuple<int, int, int>> ts = null;
-            if (fractalComboBox.SelectedIndex == 1)
-                ts = SanMarco(w, h);
-            else if (fractalComboBox.SelectedIndex == 2)
-                ts = SiegelDisk(w, h);
-            else if (fractalComboBox.SelectedIndex == 3)
-                ts = DouadyRabbit(w, h);
-            else if (fractalComboBox.SelectedIndex == 4)
-                ts = JuliaVar1(w, h);
-            else if (fractalComboBox.SelectedIndex == 5)
-                ts = JuliaVar2(w, h);
-            else
-                ts = MandelbrotEasy(w, h);
+            switch (fractalComboBox.SelectedIndex)
+            {
+                case 1:
+                    ts = SanMarco(w, h);
+                    break;
+                case 2:
+                    ts = SiegelDisk(w, h);
+                    break;
+                case 3:
+                    ts = DouadyRabbit(w, h);
+                    break;
+                case 4:
+                    ts = JuliaVar1(w, h);
+                    break;
+                case 5:
+                    ts = JuliaVar2(w, h);
+                    break;
+                default:
+                    ts = MandelbrotEasy(w, h);
+                    break;
+            }
+
             ts = ts.Where(t => t.Item3 != 0 && t.Item3 != 1); //Minimize the no of pixels to be drawn.
 
             foreach (var t in ts)
